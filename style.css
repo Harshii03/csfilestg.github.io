@@ -1,4 +1,4 @@
-
+/*jai shree krsna*/
 * {
 font-family: Gilroy;
 font-weight: 700;
@@ -81,6 +81,24 @@ input:checked+.slider:before {
 -webkit-transform: translateX(26px);
 -ms-transform: translateX(26px);
 transform: translateX(26px);
+}
+
+.sidebar {
+transition: all 0.4s;
+
+animation: opct-an 1s ease 0s forwards;
+
+}
+
+@keyframes opct-an {
+from {
+opacity: 0;
+}
+
+to {
+opacity: 1;
+}
+
 }
 
 /* Light Mode Styles */
@@ -220,6 +238,7 @@ height: 50px;
 /* animation: spin 4s linear forwards; */
 animation: spin 1s ease 0s forwards;
 /* Increase the animation duration to 4 seconds */
+
 }
 
 @keyframes spin {
