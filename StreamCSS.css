@@ -1,5 +1,5 @@
 :root {
-    --mycol: rgb(255, 0, 43);
+    --mycol: #ff003c;
     --gcol: linear-gradient(to right, red, blue);
 }
 
@@ -274,7 +274,11 @@ a {
     font-size: 15px;
     font-weight: 550;
     transition: all 0.4s ease;
+    /* opacity: 0; */
+}
 
+.links a {
+    opacity: 0;
 }
 
 button {
