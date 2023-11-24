@@ -325,13 +325,13 @@ button:active {
     transition: all 0.4s ease;
 }
 
-/* .abt-sec button {
-    background-color: transparent;
-    padding: 17px 30px 15px;
-    border: 2px red solid;
-    border-radius: 35px;
+.mid {
+    padding: 30px 20px 100px;
+    font-size: 40px;
     font-weight: 600;
-} */
+    /* animation: stretchInOut 1s ease 0s infinite; */
+
+}
 
 
 
@@ -361,4 +361,21 @@ button:active {
         transform: translateX(0px);
     }
 
+}
+
+@keyframes stretchInOut {
+
+    from {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(2.01);
+        transform: scaleY(2.01);
+    }
+
+    to {
+        transform: scaleX(1);
+        transform: scaleY(1);
+    }
 }

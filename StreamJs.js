@@ -11,6 +11,9 @@ let chnl_link = document.querySelectorAll('.chnl-link a')
 let abt_chnl = document.querySelector('.abt-chnl')
 let contact = document.querySelectorAll('.contact a')
 let timer = 0
+
+// title of my webpage 
+document.querySelector(".title").textContent = 'BISAL FILES'
 // adding under in home btn at first 
 homeBtn.classList.add('active');
 // when clicking about
@@ -45,7 +48,6 @@ bot_btn.addEventListener("click", () => {
         i.style.animation = `linksBtnAn 2s ease ${timer}s infinite ,strtLoad 1s ease ${timer}s forwards`;
         timer += 0.3;
     });
-
     timer = 0;
 })
 contact_btn.addEventListener("click", () => {
@@ -54,13 +56,11 @@ contact_btn.addEventListener("click", () => {
         i.style.animation = `linksBtnAn 2s ease ${timer}s infinite ,strtLoad 1s ease ${timer}s forwards`;
         timer += 0.3;
     });
-
     timer = 0;
 })
 
 // btn animations 
 let dldBtn = document.querySelectorAll('.downloadBtn button')
-
 timer = 0
 links.forEach((i) => {
     i.style.animation = `linksBtnAn 2s ease ${timer}s infinite`
@@ -129,9 +129,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // disabling right click
-    document.addEventListener("contextmenu", function (e) {
-        e.preventDefault();
-    });
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+});
 document.addEventListener('keydown', function (e) {
     if (
         e.key === 'F12' ||
