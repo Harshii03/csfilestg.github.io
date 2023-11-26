@@ -40,6 +40,7 @@ nav {
     z-index: 100;
     background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.016));
     backdrop-filter: blur(5px);
+    font-weight: 700;
 }
 
 
@@ -110,6 +111,7 @@ a {
 }
 
 .file-name {
+    margin-top: 20px;
     width: auto;
     height: auto;
     padding: 20px;
@@ -254,6 +256,14 @@ a {
 .abt-sec h1 {
     text-align: center;
     transform: translateY(20px);
+    font-weight: 700;
+}
+
+.abt-sec p {
+    text-align: center;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
@@ -285,7 +295,25 @@ button {
     transition: all 1s ease;
     /* opacity: 0; */
     /* animation: linksBtnAn 2s ease 0.3s infinite, strtLoad 4s ease 0.5s forwards; */
+    position: relative;
+    overflow: hidden;
+}
 
+.links button::before,
+.downloadBtn button::before {
+    opacity: 0;
+    left: -10px;
+    top: -20px;
+    content: "";
+    width: 20%;
+    height: 200%;
+    position: absolute;
+    background-color: #ffffff18;
+    box-shadow: 2px 2px 30px 30px #ffffff18;
+    rotate: 20deg;
+    animation: var(--beforestyl);
+    filter: contrast(100);
+    /* border-radius: 100%; */
 }
 
 .links button:hover {
@@ -326,14 +354,59 @@ button:active {
 }
 
 .mid {
-    padding: 30px 20px 100px;
-    font-size: 40px;
-    font-weight: 600;
-    /* animation: stretchInOut 1s ease 0s infinite; */
-
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    align-items: center;
+    text-align: center;
 }
 
 
+.mid-text {
+    padding: 30px 20px 100px;
+    font-size: 40px;
+    font-weight: 600;
+    position: absolute;
+    opacity: 0;
+    /* top: 0%; */
+    animation: midTextAn 2s ease forwards;
+    animation-timeline: scroll();
+}
+
+.last-text {
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+}
+
+.last-text p {
+    animation: last-text-an 1s ease forwards;
+    animation-timeline: scroll();
+    width: 90vw;
+
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 10px;
+    gap: 10px;
+}
+
+.copyright h5 {
+    font-size: 13px;
+}
+
+.icons {
+    width: min-content;
+    display: flex;
+    gap: 10px;
+}
 
 @keyframes linksBtnAn {
 
@@ -377,5 +450,46 @@ button:active {
     to {
         transform: scaleX(1);
         transform: scaleY(1);
+    }
+}
+
+@keyframes midTextAn {
+    from {
+        opacity: 0;
+        transform: translateY(600px);
+    }
+
+    100% {
+        opacity: 1;
+        /* transform: translateY(-50px); */
+    }
+}
+
+@keyframes last-text-an {
+    from {
+        opacity: 0;
+    }
+
+    60% {
+        transform: translateY(300px);
+        opacity: 0;
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes button_shine {
+    from {
+        opacity: .9;
+        left: -100px;
+    }
+
+    to {
+        opacity: 1;
+        left: 400px;
     }
 }
