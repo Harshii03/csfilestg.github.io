@@ -265,7 +265,7 @@ function hd_player() {
     window.location.href = openHDplayer;
 }
 
-function lazyDownload() {
+function bisalDownload() {
     const openbisallink = bisallink;
     window.location.href = openbisallink;
 }
