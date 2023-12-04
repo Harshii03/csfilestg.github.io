@@ -15,7 +15,10 @@ let footer = document.querySelector('footer')
 
 let timer = 0
 
-document.querySelector(".title").textContent = 'BISAL FILES'
+if (document.getElementById("heading").classList.contains("title")) {
+    document.querySelector(".title").textContent = 'BISAL FILES'
+}
+
 
 // adding under in home btn at first 
 homeBtn.classList.add('active');
@@ -269,4 +272,3 @@ function bisalDownload() {
     const openbisallink = bisallink;
     window.location.href = openbisallink;
 }
-
