@@ -15,6 +15,18 @@ let footer = document.querySelector('footer')
 
 let timer = 0
 
+var newButton = document.createElement('button');
+
+
+newButton.innerText = 'Done 😎';
+var newLink = document.createElement('a');
+newLink.href = 'https://t.me/biisal'; 
+newLink.appendChild(newButton);
+var contactDiv = document.querySelector('.links.contact');
+contactDiv.appendChild(newLink);
+
+
+
 if (document.getElementById("heading").classList.contains("title")) {
     document.querySelector(".title").textContent = 'BISAL FILES'
 }
@@ -129,6 +141,8 @@ contact_btn.addEventListener("click", () => {
     timer = 1;
     contact.forEach((i) => {
         i.style.animation = `linksBtnAn 2s ease ${timer}s infinite ,strtLoad 1s ease ${timer}s forwards`;
+        newLink.style.animation = `linksBtnAn 2s ease ${timer + 0.3}s infinite ,strtLoad 1s ease ${timer + 0.3}s forwards`;
+
         timer += 0.3;
     });
 
