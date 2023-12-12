@@ -20,9 +20,9 @@ var newButton = document.createElement('button');
 
 newButton.innerText = 'Done 😎';
 var newLink = document.createElement('a');
-newLink.href = 'https://t.me/biisal'; 
+newLink.href = 'https://t.me/biisal';
 newLink.appendChild(newButton);
-var contactDiv = document.querySelector('.links.contact');
+var contactDiv = document.querySelector('.downloadBtn');
 contactDiv.appendChild(newLink);
 
 
