@@ -1,0 +1,4 @@
+services:
+  - type: web
+    buildCommand: echo 'Nothing to build'
+    startCommand: python -m http.server $PORT
